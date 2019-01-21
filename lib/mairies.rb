@@ -25,15 +25,13 @@ def get_all_email(name_and_url)
 
   name_and_url.map.with_index do |value, i|
     name_and_email << {value["name"] => get_townhall_email(value["url"])}
-    # break if i == 20 
+    break if i == 5 
   end
-  puts name_and_email
+  name_and_email
 end
 
 def perform
-  # puts get_townhall_email("http://annuaire-des-mairies.com/95/ableiges.html")
-  # url_and_name
-  get_all_email(url_and_name)
+  puts get_all_email(url_and_name())
 end
 
 perform
