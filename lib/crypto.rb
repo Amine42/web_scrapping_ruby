@@ -22,11 +22,11 @@ def crypto_scrap
   name.map.with_index do |name, i|
     price_and_name << {name => price[i]}
   end
-  puts price_and_name
+  price_and_name
 end
 
 def perform
-  crypto_scrap
+  puts crypto_scrap
 end
 
 perform
